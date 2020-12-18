@@ -139,11 +139,11 @@ RSpec.describe "Admin::V1::Categories as :admin", type: :request do
       expect(body_json).to_not be_present
     end
 
-    it 'removes all associated product categories' do
-      product_categories = create_list(:product_category, 3, category: category)
+    it 'does not remove unassociated product categories' do
+      product_categories = create_list(:product_category, 3)
       delete url, headers: auth_header(user)
-      expected_product_categories = ProductCategory.where(id: product_categories.map(&:id))
-      expect(expected_product_categories.count).to eq 0
+      present_product_categories_ids = product_categories.map(&:id)
+      expected_product_categories = ProductCategory.where(id: present_product_categories_ids)
       expect(expected_product_categories.ids).to contain_exactly(*present_product_categories_ids)
     end
   end
