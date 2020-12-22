@@ -38,7 +38,7 @@ RSpec.describe "Admin V1 Users without authentication", type: :request do
   end
 
   context "DELETE /users/:id" do
-    let!(:user) { create(:user) }
+    let(:user) { create(:user) }
     let(:url) { "/admin/v1/users/#{user.id}" }
 
     before(:each) { delete url }
