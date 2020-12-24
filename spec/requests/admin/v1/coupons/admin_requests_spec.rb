@@ -5,7 +5,7 @@ RSpec.describe "Admin V1 Coupons as :admin", type: :request do
 
   context "GET /coupons" do
     let(:url) { "/admin/v1/coupons" }
-    let!(:coupons) { create_list(:coupon, 1) }
+    let!(:coupons) { create_list(:coupon, 5) }
 
     it "return all Coupons" do
       get url, headers: auth_header(user)
