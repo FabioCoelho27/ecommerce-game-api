@@ -6,6 +6,7 @@ module Admin::V1
       permitted = params.permit({ search: :name }, { order: {} }, :page, :length)
       @loading_service = Admin::ModelLoadingService.new(Coupon.all, permitted)
       @loading_service.call
+     
     end
 
     def create
