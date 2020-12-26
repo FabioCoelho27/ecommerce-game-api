@@ -1,3 +1,8 @@
 json.categories do
-  json.array! @categories, :id, :name
+  json.array! @loadingservice, :id, :name
 end
+
+
+
+
+
