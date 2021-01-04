@@ -9,9 +9,6 @@ Things you may want to cover:
 * Features
   Abstract Modules to busines roles
   Autorization and Autentication roles
-  Queues and Backgroud Jobs with Sidekiq & Redis
-  Advanced queries with ElasticSearch
-  JavaScript to relatime changes view
   Internationalization
   Automatized tests
 
