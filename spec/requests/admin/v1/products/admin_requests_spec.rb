@@ -41,7 +41,7 @@ RSpec.describe "Admin V1 Products as :admin", type: :request do
 
       let(:search_params) { { search: { name: "Search" } } }
 
-      it "returns only seached products limited by default pagination" do
+      it "returns only searched products limited by default pagination" do
         get url, headers: auth_header(user), params: search_params
         expected_return = search_name_products[0..9].map do |product|
           build_game_product_json(product)
