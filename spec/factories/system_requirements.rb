@@ -4,7 +4,7 @@ FactoryBot.define do
     operational_system { Faker::Computer.os }
     storage { "5GB" }
     processor { "AMD Ryzen 7" }
-    memory { "8GB" }
-    video_board { "RX 580" }
+    memory { "2GB" }
+    video_board { "N/A" }
   end
 end
